@@ -1,9 +1,6 @@
 class Table {
     __Data = []
     Size = 0
-    __Update = function() {
-      this.Size = this.__Data.length-1
-    }
     pairs = function(newFunction) {
       var __Index = 0
       for (var data of this.__Data) {
@@ -17,7 +14,7 @@ class Table {
           this.__Data.push(data[i])
         }
       }
-      this.__Update()
+      this.Size = this.__Data.length-1
     }
     remove = function(index) {
       this.__Data[index] = null
@@ -25,7 +22,7 @@ class Table {
         this.__Data[newIndex-1] = this.__Data[newIndex]
       }
       this.__Data.length -= 1
-      this.__Update()
+      this.Size = this.__Data.length-1
     }
     constructor(...data) {
       if (data!=null) {
@@ -33,6 +30,6 @@ class Table {
           this.__Data.push(data[i])
         }
       }
-      this.__Update()
+      this.Size = this.__Data.length-1
     }
 }
