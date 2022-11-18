@@ -1,6 +1,6 @@
 -- v0.0.1 (not optimized)
--- Video:
-
+-- Video: https://youtu.be/ZBlBpuoza18
+-- "Autofarming made Simple"
 
 local Make = Instance.new("ScreenGui")
 local Holder = Instance.new("Frame")
